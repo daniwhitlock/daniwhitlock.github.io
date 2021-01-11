@@ -1,0 +1,344 @@
+/* Still need to do: fix gallery image, add media queries */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: rgb(255, 255, 255);
+    --secondary-color: rgb(36, 34, 34); 
+    --tertiary-color: rgb(13, 183, 206);
+    --fourth-color: rgb(151, 3, 3);
+}
+
+body {
+    color: var(--primary-color);
+    font-family: 'Montserrat', sans-serif;
+    background: var(--secondary-color);
+}
+h2 {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+/*Begin header style */
+header {
+    padding: 10px 35px;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    position: -webkit-sticky; 
+    top: 0;
+    z-index: 9999;
+}
+
+.logo {
+    font-family: 'Raleway', sans-serif;
+    color: var(--fourth-color);
+    font-weight: bold;
+    padding: 2px 5px 2px 4px;
+    font-size: 3em;
+}
+
+header nav {
+    margin: 10px 0;
+    display:flex;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+header nav ul li a {
+    text-transform: uppercase;
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-size:2em;
+    text-align: center;
+}
+
+header nav ul li a:hover {
+    border-bottom: solid 2px var(--fourth-color);
+}
+/*End header style*/
+
+/*Begin hero style*/
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+}
+
+.hero h2 {
+    color: var(--primary-color);
+    text-align: center;
+    font-size: 6vw;
+    font-weight: 500;
+}
+.hero p {
+    text-align: center;
+    color: var(--fourth-color);
+    font-weight: 400;
+    font-size: 2vw;
+}
+/*End hero style */
+
+/*Begin  about-me section */
+
+.about-grid-container {
+    display: grid;
+    grid-template-columns: 1.5fr repeat(4, 1fr);
+    grid-template-rows: (1, 10vw);
+    grid-gap: 35px;
+    margin: 40px 40px 40px 20px;
+}
+
+.grid-item {
+    display: flex;
+     /* background-color: gray;  */
+    padding: .75em;
+}
+.item-header {
+    font-size: 40px;
+    text-align: center;
+    align-items: center; /*non-main axis -up/down centering */
+    justify-content: center; /* main axis-in this case x axis */
+    /* border-right: 5px solid var(--tertiary-color);  */
+    grid-column: 1/2;
+}
+
+.item-selfie img {
+    width:100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+.item-selfie {
+    grid-column: 5/6;
+    grid-row: 1/2;
+}
+.item-bio {
+    grid-column:2/5;
+    grid-row: 1/2;
+    align-items:center;
+}
+.item-bio p {
+    font-size: 25px;
+    text-align: left; 
+    line-height: 1.5;
+    font-style: lighter;
+}
+.bio{
+    font-size: 30px;
+    color: var(--fourth-color);
+    font-weight: 500;
+}
+.bio-smaller {
+    font-size: 23px;
+    color: var(--primary-color);
+    font-style: italic;
+    font-weight: lighter;
+}
+
+
+/* end About me section */
+
+/* Begin work section */
+.work-grid-container {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr repeat(2, 1fr);
+    grid-template-rows: (1, 10vw);
+    grid-gap: 20px;
+    margin: 40px 40px 40px 20px;
+    /* grid-auto-flow: dense; */
+}
+
+.work-header {
+    
+    grid-row: span 12;
+}
+.portfolio-description {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.first-image {
+    background-image: url("../images/run-buddy.jpg");
+    grid-column: 2/3; /* get specific about rows and columns*/
+    grid-row: span 6;
+    
+}
+.second-image {
+    background-image: url("../images/PasswordGenerator.JPG");
+    grid-column: span 2;
+    grid-row: span 4;
+}
+
+.third-image {
+    background-image: url("../images/RobotGladiators.JPG");
+    grid-column: span 2;
+    grid-row: span 4;
+}
+
+.fourth-image {
+    background-image: url("../images/Cravings.JPG");
+    grid-column: span 2;
+    grid-row: span 4;
+}
+
+
+.grid-item div{
+    display: flex; 
+    flex-direction: column; 
+    position: relative;
+    bottom: 50px;
+    background-color: lightgray;
+    margin-top: auto;
+    padding: 10px 5px;
+    text-align: center;
+}
+
+.grid-item div h3 {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: bold; 
+}
+a {
+    text-decoration: none;
+}
+/* End work section */
+
+/* Begin contact-info section */
+
+.contact-grid-container {
+    display: grid;
+    grid-template-columns: 1.5fr repeat(4, 1fr);
+    grid-template-rows: (1, 10vw);
+    grid-gap: 35px;
+    margin: 40px 40px 40px 20px;
+}
+.item-contact {
+    grid-column: 1/2;
+}
+
+.item-contact-info {
+    grid-column: 2/6;
+}
+
+.item-contact-info ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center; 
+    list-style: none;
+}
+
+.item-contact-info ul li a, .item-contact-info ul li h4 {
+    display: flex;
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-size:1.65vw;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    text-decoration: none;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--fourth-color);
+    margin: 0 30px 0 30px;    
+}
+
+/* End contact section */
+
+
+/*Footer style*/
+footer {
+    background-color:var(--fourth-color);
+    display: flex;
+    text-align: flex-start;
+    text-justify: flex-start;
+    padding: 0 0 0 40px;
+}
+
+footer h2 {
+    font-weight: lighter;
+    padding: 10px 10px 10px 10px;
+    color: var(--primary-color);
+    font-style: italic;
+}
+
+footer span {
+    font-weight: 700;
+    font-size: 30px;
+    padding-left: 10px;
+}
+
+
+
+/* End footer style */
+@media screen and (max-width: 768px) {
+    .about-grid-container {
+       
+        grid-template-columns: 1.5fr;
+        grid-template-rows: 1fr 5fr 10fr;
+        grid-gap: 15px;
+        margin: 10px 40px 40px 20px;
+        
+    }
+    .grid-item {
+        display: flex;
+         /* background-color: gray;  */
+        padding: .15em;
+    } 
+    
+    
+    .item-header {
+        font-size: 25px;
+        text-align: center;
+        align-items: center; /*non-main axis -up/down centering */
+        justify-content: center; /* main axis-in this case x axis */
+        border-bottom: 5px solid var(--tertiary-color); 
+        border-right: none;
+        grid-row: 1/2;
+        /* display: inline-block; */
+    }
+    
+    .item-selfie img {
+        width:75%;
+        max-height: 75%;
+        justify-content: center;
+        align-items: center;
+        object-fit: cover;
+    }
+    .item-selfie {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .item-bio {
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+    .item-bio p {
+        font-size: 15px;
+        text-align: left; 
+        line-height: 1.5;
+        font-style: lighter;
+    }
+
+
