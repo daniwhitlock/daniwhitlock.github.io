@@ -9,14 +9,14 @@
 :root {
     --primary-color: rgb(255, 255, 255);
     --secondary-color: rgb(36, 34, 34);
-    --tertiary-color: rgb(13, 183, 206);
+    --tertiary-color: rgb(0, 0, 0);
     --fourth-color: rgb(151, 3, 3);
 }
 
 body {
     color: var(--primary-color);
     font-family: 'Montserrat', sans-serif;
-    background: var(--secondary-color);
+    background: var(--tertiary-color);
     font-weight: 300;
 }
 
@@ -29,26 +29,25 @@ h2 {
 /*Begin header style */
 
 header {
-    padding: 10px 35px;
-    background-color: var(--secondary-color);
+    padding: 5px 35px;
+    background-color: var(--tertiary-color);
     display: flex;
     justify-content: space-between;
-    position: sticky;
-    position: -webkit-sticky;
+    /* position: sticky;
+    position: -webkit-sticky; */
     top: 0;
     z-index: 9999;
 }
 
 .logo {
-    font-family: 'Raleway', sans-serif;
-    color: var(--fourth-color);
-    font-weight: bold;
-    padding: 2px 5px 2px 4px;
-    font-size: 3vw;
+    font-family: 'Permanent Marker', cursive;
+    font-weight: 100;
+    letter-spacing: 2px;
+    font-size: 3em;
+    text-transform: uppercase;
 }
 
 header nav {
-    margin: 10px 0;
     display: flex;
 }
 
@@ -67,14 +66,14 @@ header nav ul {
 
 header nav ul li a {
     text-transform: uppercase;
-    padding: 10px 15px;
-    font-weight: lighter;
-    font-size: 20px;
+    padding: 5px 15px;
+    font-weight: normal;
+    font-size: 2em;
     text-align: center;
 }
 
 header nav ul li a:hover {
-    border-bottom: solid 2px var(--fourth-color);
+    border-bottom: solid 3px var(--fourth-color);
 }
 
 /*End header style*/
@@ -86,24 +85,34 @@ header nav ul li a:hover {
     align-items: center;
     justify-content: center;
     padding-top: 100px;
-    padding-bottom: 40px;
+    padding-bottom: 100px;
+    /* padding-right:250px; */
     text-transform: uppercase;
-    font-family: 'Raleway', sans-serif;
-    background-image: linear-gradient(180deg, var(--secondary-color), black, var(--secondary-color));
+    background: var(--primary-color);
+     /* background-image: linear-gradient(225deg, white, white 75%, black 15%, black 35%);
+     border-bottom: solid black 55px;  */
+} 
+.center {
+    text-align: center;
 }
 
-.hero h2 {
-    color: var(--primary-color);
-    text-align: center;
-    font-size: 6vw;
-    font-weight: 800;
+.hero-hello-span {
+    font-family: 'Permanent Marker', cursive;
+    font-weight: lighter;
+    color: var(--tertiary-color);
+    font-size: 65px;
+}
+
+ .hero-name {
+    font-size: 45px;;
+    color: var(--tertiary-color);
 }
 
 .hero p {
-    text-align: center;
     color: var(--fourth-color);
-    font-weight: 500;
-    font-size: 2vw;
+    padding-top: 10px;
+    font-weight: 300;
+    font-size: 35px;
 }
 
 /*End hero style */
@@ -114,7 +123,9 @@ header nav ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 40px 40px 40px 40px;
+    padding: 40px;
+    background-color: var(--tertiary-color);
+    background:linear-gradient(to right, rgb(151, 3, 3),rgb(151, 3, 3) 75%, black 15%, black 25%);
 }
 
 .item-bio {
@@ -123,60 +134,81 @@ header nav ul li a:hover {
 }
 
 .bio {
-    font-size: 30x;
-    text-align: left;
+    font-size: 30px;
+    text-align: center;
     line-height: 1.5;
-    color: var(--fourth-color);
-    font-weight: 700;
-    display: inline-block;
-}
-
-.bio-smaller {
     color: var(--primary-color);
-    font-style: italic;
-    font-weight: lighter;
 }
 
 img {
     width: 60%;
 }
+
 .image-holder {
-    padding-left: 40px;
+    justify-content: flex-end;
+    padding-left: 80px;
+
 }
 
 /* end About me section */
 
 /* Begin work section */
 
+#work {
+    padding: 50px;
+}
 .work-header {
     font-size: 40px;
     text-align: center;
     padding: 20px;
-    padding-bottom: 40px;
+    padding-bottom: 40px; 
 }
+
 .work-header h2 {
     width: 100%;
-    border-bottom: 1px solid var(--fourth-color);
+    border-bottom: 3px solid var(--fourth-color);
     line-height: 0.1em;
     margin: 10px 0 20px;
 }
 .work-header h2 span {
-    background: var(--secondary-color);
+    background: var(--tertiary-color);
     padding: 0 10px;
+    font-family: 'Permanent Marker', cursive;
 }
 
-.portfolio-description {
+
+.work-flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-start;
     text-decoration: none;
     color: var(--primary-color);
 }
-.work-flex-container {
-    display: flex;
-    justify-content: center;
+a {
+    text-decoration: none;
+}
 
+.work-flex-container ul {
+    flex-wrap: wrap;
+    display: inline-block;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    list-style: none;
 }
-.work-flex-container a {
-    margin: 20px;
+
+.work-flex-container ul li a {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 5px 15px;
+    font-weight: normal;
+    font-size: 2em;
+    text-align: center;
 }
+.work-flex-container ul li a h3:hover {
+    background-color: var(--fourth-color);
+}
+
 
 .first-image {
     background-image: url("../images/run-buddy.jpg");
@@ -198,21 +230,7 @@ img {
     
 }
 
-.grid-item div {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    bottom: 50px;
-    background-color: lightgray;
-    margin-top: auto;
-    padding: 10px 5px;
-    text-align: center;
-}
 
-
-a {
-    text-decoration: none;
-}
 
 /* End work section */
 
