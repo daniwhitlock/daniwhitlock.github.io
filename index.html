@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial scale=1.0" />
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@200&family=Kanit:wght@100;900&family=Montserrat:wght@100;500;700;800&family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@200&family=Kanit:wght@100;900&family=Montserrat:wght@100;300;500;700;800&family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./assets/css/style.css"/>        
 <title> Dani Whitlock</title>
     </head>
@@ -26,10 +26,10 @@
                         <a href="#about-me">About Me</a>
                     </li>
                     <li>
-                        <a href="#work">Work</a>
+                        <a href="#work">Portfolio</a>
                     </li>
                     <li>
-                        <a href="#contact-me">Contact Me</a>
+                        <a href="#contact-me">Contact</a>
                     </li>
                 </ul>
             </nav>
@@ -47,42 +47,45 @@
         <!-- End hero section -->
 
         <!-- Begin main section -->
-        <section  id="about-me" >
-            <div  class="about-grid-container">
-                <div class="grid-item item-header">
-                    <h2>About<br> Me</h2>
-                </div>
-                
-                <div class="grid-item item-bio">
-                    <p class="bio">
-                        Hey. 
+        <section  id="about-me" class= "about-flex-container" >
+            <div class="image-holder">
+                <img src="./assets/images/dani-professional.jpg" id = "dani-img"/>
+            </div>
+            <div class="item-bio">
+                <p class="bio">
+                    Hey. 
+                    <br>
+                    I'm Dani.
+                    <br>
+                    <br>
+                    <span class="bio-smaller">
+                        A full stack web developer. 
                         <br>
-                        I'm Dani.
                         <br>
-                        <span class="bio-smaller">
-                            A full stack web developer. 
-                            <br>
-                            I enjoy taking complex problems and turning them into visually appealing user friendly designs. 
-                        </span>
-                       
-                        
-                    </p>
-                </div>
-                <div class="grid-item item-selfie">
-                    <img src="./assets/images/daniselfie.jpg" id = "dani-img"/>
-                </div>
+                        I enjoy taking complex problems and turning them into visually appealing user-friendly designs. 
+                    </span>
+                </p>
             </div>
             
         </section> 
             
         <!--Begin work section  -->
         <section id="work" >
-            <div class ="work-grid-container">
-                <div  class="grid-item item-header work-header">
-                    <h2>Work</h2>
-                </div>
+            
+            <div  class="work-header">
+                <h2><span>Portfolio</span></h2>
+            </div>
+           
+            <div class ="work-flex-container">
+                <div class="repos-container">
+                    <div>
+                        <h3> Cravings                       </h3>
+                    </div>
 
-                <div>
+                </div>
+                
+
+                
                     <a href ="https://daniwhitlock.github.io/run-buddy2.0/" target="_blank" class="first-image">
                         <div>
                             <h3 class="portfolio-description">RUN BUDDY2.0</h3>
@@ -94,10 +97,10 @@
                             <h3 class="portfolio-description">Password Generator</h3>
                         </div>
                     </a>
-                </div>
+               
                 
                 
-                <div>
+              
                     <a href="https://daniwhitlock.github.io/robot-gladiators/" target= "_blank" class="third-image">
                         <div>
                             <h3  class="portfolio-description">Robot Gladiators MVP</h3>
@@ -110,7 +113,7 @@
                         </div>
 
                     </a>
-                </div>
+               
             </div>
         </section>    
         
