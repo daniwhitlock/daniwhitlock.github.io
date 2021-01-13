@@ -11,6 +11,7 @@
     --secondary-color: rgb(36, 34, 34);
     --tertiary-color: rgb(0, 0, 0);
     --fourth-color: rgb(151, 3, 3);
+    /* --fourth-color: rgb(78, 212, 221); */
 }
 
 body {
@@ -118,19 +119,16 @@ header nav ul li a:hover {
 /*End hero style */
 
 /*Begin  about-me section */
-
+.color-background-about {
+    /* background-image:linear-gradient(to right, rgb(151, 3, 3),rgb(151, 3, 3) 80%, black 15%, black 20%); */
+    background-color: var(--fourth-color);
+}
 .about-flex-container {
-    display: flex;
-    justify-content: center;
+    display: inline-flex;
+    justify-content: flex-end;
     align-items: center;
     padding: 40px;
-    background-color: var(--tertiary-color);
-    background:linear-gradient(to right, rgb(151, 3, 3),rgb(151, 3, 3) 75%, black 15%, black 25%);
-}
-
-.item-bio {
-    font-size: 40px;
-    /* margin: 200px; */
+    border: solid 40px var(--tertiary-color);
 }
 
 .bio {
@@ -145,9 +143,7 @@ img {
 }
 
 .image-holder {
-    justify-content: flex-end;
-    padding-left: 80px;
-
+    text-align: center;
 }
 
 /* end About me section */
@@ -190,7 +186,7 @@ a {
 
 .work-flex-container ul {
     flex-wrap: wrap;
-    display: inline-block;
+    display: inline;
     justify-content: space-between;
     align-items: center;
     text-decoration: none;
@@ -235,6 +231,11 @@ a {
 /* End work section */
 
 /* Begin contact-info section */
+#contact-me {
+    background-color: var(--primary-color);
+    padding: 5px;
+    border-bottom: solid 30px var(--fourth-color);
+}
 
 .contact-grid-container {
     display: grid;
@@ -246,6 +247,13 @@ a {
 
 .item-contact {
     grid-column: 1/2;
+}
+.item-contact h2 {
+    
+    font-family: 'Permanent Marker', cursive;
+    font-size: 3vw;
+    text-align: center;
+    color: var(--tertiary-color);
 }
 
 .item-contact-info {
@@ -264,13 +272,13 @@ a {
 .item-contact-info ul li a, .item-contact-info ul li h4 {
     display: flex;
     padding: 10px 15px;
-    font-weight: lighter;
+    font-weight: 400;
     font-size: 1.65vw;
     text-align: center;
     align-items: center;
     align-self: center;
     text-decoration: none;
-    color: var(--primary-color);
+    color: var(--tertiary-color);
     border-bottom: 2px solid var(--fourth-color);
     margin: 0 30px 0 30px;
 }
@@ -280,11 +288,11 @@ a {
 /*Footer style*/
 
 footer {
-    background-color: var(--fourth-color);
+    background-color: var(--tertiary-color);
     display: flex;
-    text-align: flex-start;
-    text-justify: flex-start;
-    padding: 0 0 0 40px;
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
 }
 
 footer h2 {
@@ -292,12 +300,15 @@ footer h2 {
     padding: 10px 10px 10px 10px;
     color: var(--primary-color);
     font-style: italic;
+    
 }
 
 footer span {
-    font-weight: 700;
+    /* font-weight: 700; */
     font-size: 30px;
     padding-left: 10px;
+    letter-spacing: 5px;
+    font-family: 'Permanent Marker', cursive;
 }
 
 /* End footer style */
