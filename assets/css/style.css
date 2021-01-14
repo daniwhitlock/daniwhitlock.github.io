@@ -134,11 +134,13 @@ header nav ul li a:hover {
 
 img {
     width: 60%;
+    border: 5px solid var(--tertiary-color);
 }
 
 .image-holder {
     text-align: center;
     padding-left: 0px;
+    
 }
 
 /* end About me section */
