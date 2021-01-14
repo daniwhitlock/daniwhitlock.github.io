@@ -1,5 +1,3 @@
-/* Still need to do: fix gallery image, add media queries */
-
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +9,6 @@
     --secondary-color: rgb(36, 34, 34);
     --tertiary-color: rgb(0, 0, 0);
     --fourth-color: rgb(151, 3, 3);
-    /* --fourth-color: rgb(78, 212, 221); */
 }
 
 body {
@@ -87,12 +84,10 @@ header nav ul li a:hover {
     justify-content: center;
     padding-top: 100px;
     padding-bottom: 100px;
-    /* padding-right:250px; */
     text-transform: uppercase;
     background: var(--primary-color);
-     /* background-image: linear-gradient(225deg, white, white 75%, black 15%, black 35%);
-     border-bottom: solid black 55px;  */
 } 
+
 .center {
     text-align: center;
 }
@@ -120,7 +115,6 @@ header nav ul li a:hover {
 
 /*Begin  about-me section */
 .color-background-about {
-    /* background-image:linear-gradient(to right, rgb(151, 3, 3),rgb(151, 3, 3) 80%, black 15%, black 20%); */
     background-color: var(--fourth-color);
 }
 .about-flex-container {
@@ -144,15 +138,14 @@ img {
 
 .image-holder {
     text-align: center;
+    padding-left: 0px;
 }
 
 /* end About me section */
 
 /* Begin work section */
 
-#work {
-    padding: 50px;
-}
+
 .work-header {
     font-size: 40px;
     text-align: center;
@@ -172,34 +165,31 @@ img {
     font-family: 'Permanent Marker', cursive;
 }
 
-
-.work-flex-container {
-    display: flex;
-    justify-content: space-between;
-    align-content: flex-start;
-    text-decoration: none;
-    color: var(--primary-color);
-}
 a {
     text-decoration: none;
+    color: var(--primary-color);
 }
 
 .work-flex-container ul {
     flex-wrap: wrap;
-    display: inline;
-    justify-content: space-between;
+    display: inline-flex;
+    justify-content: center;
     align-items: center;
     text-decoration: none;
     list-style: none;
+    padding: 20px;
 }
 
-.work-flex-container ul li a {
+.work-flex-container ul li {
     text-transform: uppercase;
     text-decoration: none;
     padding: 5px 15px;
-    font-weight: normal;
     font-size: 2em;
     text-align: center;
+}
+.work-flex-container ul li a h3 {
+    
+    font-weight: 400;
 }
 .work-flex-container ul li a h3:hover {
     background-color: var(--fourth-color);
