@@ -44,6 +44,9 @@ header {
     font-size: 3em;
     text-transform: uppercase;
 }
+.small-screen-logo {
+    display: none;
+}
 
 header nav {
     display: flex;
@@ -307,17 +310,54 @@ footer span {
 /* End footer style */
 
 @media screen and (max-width: 768px) {
+    header {        
+        justify-content: flex-start;
+        padding-left: 10px;
+    }
+    .logo {
+       display: none;
+    }
+    .small-screen-logo {
+        font-size: 2em;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 100;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: flex-start;
+        border: solid 2px var(--fourth-color);
+        padding: 2px;
+    }
+    nav ul li a{
+        display: none;
+    }
+    .hero {
+        padding: 15px;
+    }
+    .hero-hello-span {
+        font-size: 50px;
+    }
+    .hero-name {
+        font-size: 35px;
+    }
+    .hero p {
+        font-size: 25px;
+    }
     .about-flex-container {
         flex-wrap: wrap;
-
     }
+
     .bio {
         text-align: center;
+        font-size: 20px;
+    }
+    .work-flex-container ul li  {
+        font-size: 1.5em;
     }
     .grid-item {
         display: flex;
         /* background-color: gray;  */
-        padding: .15em;
+       
     }
     .item-header {
         font-size: 25px;
@@ -330,24 +370,39 @@ footer span {
         grid-row: 1/2;
         /* display: inline-block; */
     }
-    .item-selfie img {
-        width: 75%;
-        max-height: 75%;
+    .work-header h2{
+        border: none;
+    }
+    #contact-me {
+        border-bottom: solid 5px var(--fourth-color);
+        display: flex;
         justify-content: center;
-        align-items: center;
-        object-fit: cover;
     }
-    .item-selfie {
-        grid-column: 1/2;
-        grid-row: 2/3;
+
+    .contact-grid-container {
+        display: inline-flex;
+        justify-content: center;
+       /* grid-gap: 10px; */
+       margin: 0px;
+       padding: 5px;
+       padding-left: 10px;
+
     }
-    .item-bio {
-        grid-column: 1/2;
-        grid-row: 3/4;
+    .item-contact h2 {
+        font-size: 1em;
     }
-    .item-bio p {
-        font-size: 15px;
-        text-align: left;
-        line-height: 1.5;
-        font-style: lighter;
+    /* .item-contact {
+        justify-content: right;
+        text-align: right;
+    } */
+    footer {
+        padding: 5px;
+        border-top: 2px;
+    }
+    .item-contact-info ul li a, .item-contact-info ul li h4 {
+        border-bottom: none;
+    }
+    footer span {
+        font-size: 25px;
+        letter-spacing: none;
     }
