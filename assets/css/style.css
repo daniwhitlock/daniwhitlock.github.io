@@ -6,9 +6,9 @@
 
 :root {
     --primary-color: rgb(255, 255, 255);
-    --secondary-color: rgb(36, 34, 34);
-    --tertiary-color: rgb(0, 0, 0);
-    --fourth-color: rgb(151, 3, 3);
+    --secondary-color: rgb(66, 64, 64);
+    --tertiary-color: rgb(90, 86, 86);
+    --fourth-color: rgb(143, 210, 241);
 }
 
 body {
